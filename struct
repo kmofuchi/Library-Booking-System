@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Book {
+	int bookID; //unique key for books
+	string title; //title of the books
+	string author; //author of the books
+	bool isBorrowed; //borrow status of the book 
+};
+
+int main() {
+
+	//create a book object
+	Book book1;
+
+	//to assign the values
+	book1.bookID = 101;
+	book1.title = "C++ Basics";
+	book1.author = "John Doe";
+	book1.isBorrowed = false; //means book is avaliable
+
+	//display the book information
+	cout << "Book ID : " << book1.bookID << endl;
+	cout << "Title : " << book1.title << endl;
+	cout << "Author : " << book1.author << endl;
+
+	if (book1.isBorrowed == false) {
+		cout << "Status : Avaliable." << endl;
+	}
+	else {
+		cout << "Status : Borrowed." << endl;
+	}
+
+	return 0;
+}
